@@ -18,6 +18,7 @@ public class ShareLaneTest {
         driver.findElement(By.name("zip_code")).sendKeys("444444");
         driver.findElement(By.xpath("//*[@value = 'Continue']")).click();
         driver.findElement(By.xpath("//*[@value = 'Register']")).click();
+        driver.quit();
     }
 
     // 1.Open browser, URL - https://sharelane.com/cgi-bin/register.py
@@ -34,6 +35,7 @@ public class ShareLaneTest {
         driver.findElement(By.name("zip_code")).sendKeys("444444");
         driver.findElement(By.xpath("//*[@value = 'Continue']")).click();
         driver.findElement(By.xpath("//*[@value = 'Register']")).click();
+        driver.quit();
     }
     @Test
     public void fillInZipCodeFieldWithMandatoryFieldsTest() {
@@ -47,6 +49,7 @@ public class ShareLaneTest {
         driver.findElement(By.name("password1")).sendKeys("23456");
         driver.findElement(By.name("password2")).sendKeys("23456");
         driver.findElement(By.xpath("//*[@value = 'Register']")).click();
+        driver.quit();
     }
     @Test
     public void fillInZipCodeFieldWithOptionalFieldsTest() {
@@ -57,6 +60,7 @@ public class ShareLaneTest {
         driver.findElement(By.xpath("//*[@value = 'Continue']")).click();
         driver.findElement(By.name("last_name")).sendKeys("Ivanov");
         driver.findElement(By.xpath("//*[@value = 'Register']")).click();
+        driver.quit();
     }
     @Test
     public void fillInZipCodeFieldWithFullFieldsTest() {
@@ -71,6 +75,7 @@ public class ShareLaneTest {
         driver.findElement(By.name("password1")).sendKeys("23456");
         driver.findElement(By.name("password2")).sendKeys("23456");
         driver.findElement(By.xpath("//*[@value = 'Register']")).click();
+        driver.quit();
     }
     @Test
     public void fillInZipCodeFieldWithNotConfirmedPasswordTest() {
@@ -85,6 +90,7 @@ public class ShareLaneTest {
         driver.findElement(By.name("password1")).sendKeys("23456");
         driver.findElement(By.name("password2")).sendKeys("23456789");
         driver.findElement(By.xpath("//*[@value = 'Register']")).click();
+        driver.quit();
     }
     @Test
     public void fillInZipCodeFieldWithoutPasswordTest() {
@@ -99,5 +105,6 @@ public class ShareLaneTest {
         driver.findElement(By.name("password1")).sendKeys("");
         driver.findElement(By.name("password2")).sendKeys("");
         driver.findElement(By.xpath("//*[@value = 'Register']")).click();
+        driver.quit();
     }
 }
